@@ -16,8 +16,9 @@ public class exercicio01 {
         B = sc.nextInt();
 
         soma = A + B;
-        System.out.printf("A soma entre %d e %d é dê: %d", A, B, soma);;
+        System.out.printf("A soma entre %d e %d é dê: %d", A, B, soma);
 
+        sc.close();
     }
 }
 
