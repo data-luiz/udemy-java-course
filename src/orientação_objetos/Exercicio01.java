@@ -45,9 +45,11 @@ public class Exercicio01 {
         else if (areaY > areaX) {
             System.out.println("Triangulo Y > Triangulo X");
         }
-        else {
+        else if (areaX == areaY) {
             System.out.println("Triangulo X == Triangulo Y");
         }
-
+        else {
+            System.out.println("Triângulo inválido!");
+        }
     }
 }
