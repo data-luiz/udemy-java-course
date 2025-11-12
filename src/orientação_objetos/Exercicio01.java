@@ -1,5 +1,6 @@
 package orientação_objetos;
 
+import entities.Triangle;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -9,29 +10,27 @@ public class Exercicio01 {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        double xA, xB, xC, yA, yB, yC;
+
+        Triangle x, y;
+        x = new Triangle();
+        y = new Triangle();
 
         System.out.println("Digite as medidas do triangulo x:");
-        xA = sc.nextDouble();
-        xB = sc.nextDouble();
-        xC = sc.nextDouble();
+        x.a = sc.nextDouble();
+        x.b = sc.nextDouble();
+        x.c = sc.nextDouble();
 
         System.out.println("Digite as medidas do triangulo y:");
-        yA = sc.nextDouble();
-        yB = sc.nextDouble();
-        yC = sc.nextDouble();
+        y.a = sc.nextDouble();
+        y.b = sc.nextDouble();
+        y.c = sc.nextDouble();
 
-        double areaX = calcularArea(xA, xB, xC);
-        double areaY = calcularArea(yA, yB, yC);
+        double areaX = x.calcularArea();
+        double areaY = y.calcularArea();
 
         resultadoCalculo(areaX, areaY);
 
         sc.close();
-    }
-
-    public static double calcularArea(double a, double b, double c) {
-        double p = (a + b + c) / 2.0;
-        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
     public static void resultadoCalculo (double areaX, double areaY) {
